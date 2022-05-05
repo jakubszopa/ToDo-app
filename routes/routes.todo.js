@@ -21,7 +21,7 @@ router.post('/', async function (req, res) {
 
 router.post('/delete', async function (req, res) {
 
-    const reply = await db.getDb().collection('tasks').deleteMany({status: 0})
+    const reply = await db.getDb().collection('tasks').deleteMany({status: 1})
 
     res.redirect('/');
 });
